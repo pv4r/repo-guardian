@@ -1,0 +1,67 @@
+categories: # You can categorize pull requests in release notes using labels.
+  - title: '💥 Breaking Changes'
+    labels:
+      - 'breaking-change'
+  - title: '🚀 Features'
+    labels: 
+      - 'feature'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+  - title: '🧪 Tests'
+    labels:
+      - 'test'
+  - title: '🔧 Refactors'
+    labels:
+      - 'refactor'
+  - title: '📚 Documentation'
+    labels:
+      - 'doc'
+  - title: '🧹 Maintenance'
+    labels:
+      - 'chore'
+version-resolver: # Version number incrementing can be resolved automatically based on labels of individual pull requests
+  major:
+    labels:
+      - 'breaking-change'
+  minor:
+    labels:
+      - 'feature'
+  patch:
+    labels:
+      - 'fix'
+      - 'test'
+      - 'refactor'
+      - 'doc'
+  default: patch
+autolabeler: # You can add automatically a label into a PR, with the autolabeler option. 
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/' 
+  - label: 'fix'
+    branch:
+      - '/fix\/.+/'
+  - label: 'test'
+    branch:
+      - '/test\/.+/'
+  - label: 'refactor'
+    branch:
+      - '/refactor\/.+/'
+  - label: 'doc'
+    branch:
+      - '/docs{0,1}\/.+/'
+  - label: 'chore'
+    branch:
+      - '/chore\/.+/'
+include-labels: # Only pull requests that have the configured labels will be included in the release draft.
+  - 'breaking-change'
+  - 'feature'
+  - 'fix'
+  - 'test'
+  - 'refactor'
+  - 'doc'
+  - 'chore'
+name-template: 'v$RESOLVED_VERSION 🐣'
+tag-template: 'v$RESOLVED_VERSION'
+template: |
+  $CHANGES
