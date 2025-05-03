@@ -1,5 +1,8 @@
 ## 🔍 Repo-Guardian - Git Integrity Auditor and Repair Tool
 
+[![Status](https://img.shields.io/badge/status-under_construction-yellow)](https://github.com/pv4r/repo-guardian-pv4r)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Repo-Guardian is an advanced software development project that will result in a command-line (CLI) and terminal user interface (TUI) utility capable of auditing, repairing, and re-linearizing the integrity of any .git directory, whether it contains loose objects or packed into packfiles.
 
 ## 🛠 Key Features:
