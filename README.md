@@ -34,3 +34,8 @@ guardian export-graph --out recovered.graphml
 guardian tui ./my_repo
 
 ```
+
+# Context Diagram
+
+![Context Diagram](https://github.com/pv4r/repo-guardian/blob/eb12b57113169e857713c7384126b7acd210f310/docs/img/context.svg)
+
